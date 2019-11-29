@@ -1,0 +1,51 @@
+.PokedexTouchpadContainer {
+  height: 100px;
+  width: 100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  margin-right: 20px;
+  margin-top: 5%;
+}
+
+.PokedexTouchpadUp {
+  grid-column-start: 2;
+  grid-column-end: span 1;
+  background-color: var(--pokedex-black);
+  border: 2px solid black;
+  border-bottom: none;
+}
+
+.PokedexTouchpadLeft {
+  grid-column-start: 1;
+  grid-column-end: span 1;
+  grid-row-start: 2;
+  background-color: var(--pokedex-black);
+  border: 2px solid black;
+  border-right: none;
+}
+
+.PokedexTouchpadRight {
+  grid-column-start: 3;
+  grid-column-end: span 1;
+  grid-row-start: 2;
+  background-color: var(--pokedex-black);
+  border: 2px solid black;
+  border-left: none;
+}
+
+.PokedexTouchpadMiddle {
+  grid-column-start: 2;
+  grid-column-end: span 1;
+  grid-row-start: 2;
+  background-color: var(--pokedex-black);
+}
+
+.PokedexTouchpadBottom {
+  grid-row-start: 3;
+  grid-column-start: 2;
+  grid-column-end: span 1;
+  background-color: var(--pokedex-black);
+  border: 2px solid black;
+  border-top: none;
+}
