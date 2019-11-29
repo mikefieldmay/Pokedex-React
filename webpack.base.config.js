@@ -70,6 +70,10 @@ module.exports = {
       {
         test: /\.(png|jpe?g|gif)$/,
         loader: "url-loader?limit=8000&name=images/[name].[ext]"
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: ["file-loader"]
       }
     ]
   },
@@ -77,7 +81,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: __dirname + "/src/index.html",
       filename: "index.html",
-      inject: "body"
+      inject: "body",
+      favicon: "./src/assets/favicon.ico"
     }),
     new WebpackShellPlugin({
       onBuildStart: ["yarn build:style-typings"],
