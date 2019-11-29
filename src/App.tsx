@@ -6,6 +6,7 @@ export class App extends Component {
   render() {
     return (
       <div className={styles.PokedexContainer}>
+        {/* HEADER */}
         <div className={styles.PokedexHeader}>
           <div className={styles.PokedexHeaderButtonContainer}>
             <div className={styles.PokedexHeaderButtonRed}></div>
@@ -20,6 +21,7 @@ export class App extends Component {
           </div>
           <div className={styles.PokedexHeaderCurve}></div>
         </div>
+        {/* SCREEN */}
         <div className={styles.PokedexScreenContainer}>
           <div className={styles.PokedexScreenButtonWrapper}>
             <div className={styles.PokedexScreenButton}></div>
@@ -36,8 +38,10 @@ export class App extends Component {
             </div>
           </div>
         </div>
+        {/* FOOTER */}
         <div className={styles.PokedexBottom}>
           <div className={styles.PokedexBottomButton}></div>
+          {/* MINISCREEN */}
           <div className={styles.PokedexMiniScreenContainer}>
             <div className={styles.PokedexMiniScreenButtonContainer}>
               <div className={styles.PokedexMiniScreenThinRedButton}></div>
@@ -47,6 +51,7 @@ export class App extends Component {
               <p className={styles.PokedexScreenText}>Pikachu</p>
             </div>
           </div>
+          {/* TOUCHPAD */}
           <div className={styles.PokedexTouchpadContainer}>
             <div className={styles.PokedexTouchpadUp}></div>
             <div className={styles.PokedexTouchpadLeft}></div>
