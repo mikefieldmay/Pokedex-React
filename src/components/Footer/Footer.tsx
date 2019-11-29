@@ -7,7 +7,9 @@ import * as styles from "./Footer.css";
 
 export const Footer = () => (
   <div className={styles.PokedexBottom}>
-    <div className={styles.PokedexBottomButton} />
+    <>
+      <button className={styles.PokedexBottomButton} />
+    </>
     <InputScreen />
     <Touchpad />
   </div>

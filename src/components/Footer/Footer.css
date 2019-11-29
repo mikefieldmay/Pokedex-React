@@ -6,10 +6,22 @@
 }
 
 .PokedexBottomButton {
+  position: relative;
   background-color: var(--pokedex-black);
-  height: 40px;
-  width: 40px;
+  height: 50px;
+  width: 50px;
   border: 2px solid black;
   border-radius: 100%;
   margin-left: 30px;
+  box-shadow: 2px 4px;
+  cursor: pointer;
+}
+
+.PokedexBottomButton:active {
+  box-shadow: 2px 0px;
+  top: 3px;
+}
+
+.PokedexBottomButton:hover {
+  background-color: grey;
 }
