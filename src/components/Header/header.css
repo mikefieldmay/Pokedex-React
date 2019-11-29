@@ -1,0 +1,82 @@
+.PokedexHeader {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 50% 25% 25%;
+  height: var(--header-height);
+}
+
+.PokedexHeaderTop {
+  grid-column-start: span 3;
+  grid-row-start: 1;
+  border-bottom: var(--border-outline) solid black;
+  margin-bottom: calc(-1 * var(--border-outline));
+}
+
+.PokedexHeaderButtonContainer {
+  grid-column-start: span 1;
+  grid-row-start: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.PokedexHeaderButtonRed {
+  height: var(--header-mini-button-radius);
+  width: var(--header-mini-button-radius);
+  border-radius: 50%;
+  border: 3px solid black;
+  background: red;
+}
+
+.PokedexHeaderButtonYellow {
+  height: var(--header-mini-button-radius);
+  width: var(--header-mini-button-radius);
+  border-radius: 50%;
+  border: 3px solid black;
+  background: yellow;
+}
+
+.PokedexHeaderButtonGreen {
+  height: var(--header-mini-button-radius);
+  width: var(--header-mini-button-radius);
+  border-radius: 50%;
+  border: 3px solid black;
+  background: green;
+}
+
+.PokedexHeaderLeft {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: var(--border-outline) solid black;
+}
+
+.PokedexHeaderCurve {
+  grid-column-start: span 1;
+  grid-row-start: span 2;
+  background: linear-gradient(to bottom right, var(--pokedex-main-colour) 47%, black 47%, black 52%, var(--pokedex-main-colour) 52%);
+}
+
+.PokedexHeaderMainCircle {
+  height: var(--header-main-circle-radius);
+  width: var(--header-main-circle-radius);
+  background-color: silver;
+  border-radius: 50%;
+  border: var(--border-outline) solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.PokedexHeaderInnerCircle {
+  height: var(--header-inner-circle-radius);
+  width: var(--header-inner-circle-radius);
+  background: radial-gradient(farthest-corner at 25px 20px, white, #3277B6);
+  border-radius: 50%;
+  border: var(--border-outline) solid black;
+}
