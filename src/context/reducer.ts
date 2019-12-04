@@ -1,6 +1,7 @@
+import { SET_POKEMON_QUERY } from "./actions";
 
 interface State {
-  pokemonQuery: string
+  query: string
 }
 
 interface Action {
@@ -8,14 +9,13 @@ interface Action {
   payload?: any
 }
 
-export const defaultState = {
+export const defaultState: State = {
   query: ''
 }
 
 export const reducer = (state: State, action: Action) => {
-  console.log("Updating States", state, action.type, action.payload)
   switch (action.type) {
-    case 'POKEMON_QUERY':
+    case SET_POKEMON_QUERY:
       return {
         ...state,
         query: action.payload

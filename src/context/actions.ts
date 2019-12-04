@@ -1,6 +1,6 @@
-export const POKEMON_QUERY = 'POKEMON_QUERY'
+export const SET_POKEMON_QUERY = 'SET_POKEMON_QUERY'
 
 export const setPokemonQuery = (query: string) => ({
-  type: POKEMON_QUERY,
+  type: SET_POKEMON_QUERY,
   payload: query
 })
