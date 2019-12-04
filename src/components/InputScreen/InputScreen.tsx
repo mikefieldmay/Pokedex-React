@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 
+import { useStateValue } from '../../context/StateProvider'
+import { setPokemonQuery } from "../../context/actions"
+
 import * as styles from "./InputScreen.css";
 
 const placeholderText = "Please enter a pokemon to search for";
@@ -12,10 +15,15 @@ export const InputScreen = () => {
     ""
   );
 
+  const [ , dispatch ]: any = useStateValue()
+
   const handleOnBlur = () => {
-    if( value === "") {
+    if(value === "") {
       updatePlaceholder(placeholderText)
+    } else {
+      dispatch(setPokemonQuery(value))
     }
+    
   }
 
   return (
@@ -25,6 +33,8 @@ export const InputScreen = () => {
         <div className={styles.PokedexMiniScreenThinBlueButton} />
       </div>
       <textarea
+        value={value}
+        onChange={(event) => setValue(event.target.value)}
         onFocus={() => updatePlaceholder("")}
         onBlur={handleOnBlur}
         className={styles.PokedexMiniScreen}
